@@ -1,6 +1,6 @@
 <?php
 session_start();
-include 'connexion.php';
+require 'connexion.php';
 
 if(isset($_POST['login'])){
 
@@ -8,7 +8,7 @@ if(isset($_POST['login'])){
     $password = $_POST['password'];
 
     $sql = "SELECT * FROM artisans WHERE email='$email'";
-    $result = $conn->query($sql);
+    $result = $this->query($sql);
 
     if($result->num_rows > 0){
 
