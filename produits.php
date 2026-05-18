@@ -26,3 +26,135 @@ Supprimer
 <?php
 }
 ?>
+
+
+
+ *{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+body{
+    background-color:#968869;
+}
+
+/* HEADER */
+
+header{
+    background:white;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:20px 50px;
+}
+
+nav a{
+    text-decoration:none;
+    margin:0 15px;
+    color:#333;
+}
+
+/* HERO */
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial;
+}
+
+.hero{
+    position:relative;
+
+    width:100%;
+    height:100vh;
+
+    background:url('image/image.png');
+    background-size:cover;
+    background-position:center;
+
+    display:flex;
+    align-items:center;
+
+    padding-left:120px;
+}
+
+/* dark overlay */
+
+.overlay{
+    position:absolute;
+
+    top:0;
+    left:0;
+
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.25);
+}
+
+/* text فوق الصورة */
+
+.hero-content{
+    position:relative;
+    z-index:2;
+
+    color:white;
+
+    max-width:600px;
+}
+
+.hero-content h1{
+    font-size:85px;
+    font-weight:bold;
+
+    line-height:1.1;
+
+    margin-bottom:20px;
+
+    text-shadow:2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.hero-content p{
+    font-size:24px;
+
+    margin-bottom:35px;
+
+    line-height:1.5;
+
+    text-shadow:2px 2px 10px rgba(0,0,0,0.5);
+}
+
+.btn{
+    display:inline-block;
+
+    background:#b8742a;
+
+    color:white;
+
+    text-decoration:none;
+
+    padding:18px 40px;
+
+    border-radius:8px;
+
+    font-size:24px;
+
+    transition:0.3s;
+}
+
+.btn:hover{
+    background:#965d1f;
+}
+
+
+/* FOOTER */
+
+footer{
+    background:#222;
+    color:white;
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+} 
