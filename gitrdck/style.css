@@ -1,5 +1,4 @@
-
-body{
+/* body{
     font-family: Arial;
     margin:0;
     background:#f4f4f4;
@@ -67,7 +66,7 @@ button{
     padding:10px 20px;
     border:none;
     cursor:pointer;
-}
+}*/
 
 footer{
     background:#333;
@@ -75,4 +74,130 @@ footer{
     text-align:center;
     padding:15px;
     margin-top:20px;
+} nav{
+    background:#5c3317;
+    padding:10px;
+    text-align:center;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin:15px;
+    font-weight:bold;
+}
+
+
+
+/* L-Header container */
+.hero-header {
+    /* Dir smyt tswira dyal l-tbe3 li 3ndk f had l-blast l-url */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('image/image.png'); 
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 80vh; /* Had l-irvifae kaykhli l-image tban kbira ou dakhla f l-shasha */
+    display: flex;
+    align-items: center; /* Katjib l-ktba f lwoste dyal l-irtifae verticalement */
+    padding-left: 10%; /* Katkhli l-khwa f l-isre bach l-ktba matjich lasqa f l-jnbe */
+}
+
+/* L-blasa dyal l-ktba li dakhla f l-isre */
+.header-content {
+    text-align: left; /* Katjib l-ktba 3la l-isre kima l-tswira exact */
+    max-width: 600px; /* Bach l-ktba mathrbch l-limne bzaff */
+    color: white;
+}
+
+/* Style dyal Title l-kbir */
+.header-content h1 {
+    font-size: 3.5rem; /* Hajm l-ktba kbir */
+    font-weight: bold;
+    line-height: 1.1; /* Kaykhli s-stora ykono qrabe l-beedhom bhal l-tswira */
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Shadow sghir bach tban l-ktba wakha tswira dwiya */
+}
+
+/* Style dyal l-wasf sghir */
+.header-content p {
+    font-size: 1.2rem;
+    margin-bottom: 30px;
+    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
+}
+
+/* L-Bouton l-Orange kima l-tswira */
+.btn-discover {
+    display: inline-block;
+    background-color: #b87333; /* Lon l-orange dyal l-artisanat (Copper/Amber) */
+    color: white;
+    text-decoration: none;
+    padding: 12px 30px;
+    font-size: 1.1rem;
+    border-radius: 6px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
+    transition: background 0.3s ease;
+}
+
+.btn-discover:hover {
+    background-color: #9e5a22; /* kayghlaq chwya f l-hover */
+}
+
+/* Style bach yjiw les services f lwoste exact */
+.services-container {
+    max-width: 1200px;
+    margin: 0 auto; /* katjib l-container f lwoste horizontalement */
+    padding: 40px 20px;
+    text-align: center; /* katjib l-unwān f lwoste */
+}
+
+.services-container h2 {
+    margin-bottom: 30px;
+    font-size: 2rem;
+}
+
+.services-grid {
+    display: flex;
+    justify-content: center; /* katjib les cartes f lwoste */
+    gap: 30px; /* l-khwa li binat hom */
+    flex-wrap: wrap; /* bach ila sghart l-shasha yhbto l-tht auto */
+}
+
+/* Style dyal les cartes (Sghrnathom chwya ou dndna fihom shadow) */
+.card {
+    background: white;
+    border-radius: 8px;
+    padding: 25px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
+    text-align: left; /* l-ktba tbdal mn l-isre */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.card h3 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+.card p {
+    font-size: 0.95rem;
+    color: #555;
+    line-height: 1.5;
+    margin-bottom: 20px;
+}
+
+/* Les boutons */
+.btn {
+    background-color: #8b4513;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 4px;
+    cursor: pointer;
+    width: fit-content;
+}
+
+.btn:hover {
+    background-color: #5c3a21;
 }

@@ -9,36 +9,33 @@
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
-<header>
-    <h1>Artisanry</h1>
-    <p>Plateforme de gestion des produits artisanaux</p>
-</header>
-
-<nav>
+    <nav>
     <a href="index.php">Accueil</a>
-    <a href="ajouter.php">Ajouter Produit</a>
+    <a href="ajouter.php">connexecion</a>
 </nav>
 
-<div class="container">
-    <h2>Produits Artisanaux</h2>
+<header class="hero-header">
+    <div class="header-content">
+        <h1>Artisanry</h1>
+        <p>Plateforme de gestion des produits artisanaux</p>
+    </div>
+</header>
 
-    <?php
-    $sql = "SELECT * FROM produits";
-    $stmt = $conn->prepare($sql);
-    $stmt->execute();
-
-    while($row = $stmt->fetch(PDO::FETCH_ASSOC)) {
-    ?>
+<main class="services-container">
+    <h2>Services</h2>
+    <div class="services-grid">
         <div class="card">
-            <img src="<?php echo $row['image']; ?>" alt="">
-            <h3><?php echo $row['nom']; ?></h3>
-            <p><?php echo $row['description']; ?></p>
-            <strong><?php echo $row['prix']; ?> DH</strong>
+            <h3>Service Client</h3>
+            <p>Assistance des clients, réponse aux questions et communication rapide avec les artisans.</p>
+            <a href="formulaire client.php"><button class="btn">Formulaire client</button></a>
         </div>
-    <?php } ?>
-</div>
-
+        <div class="card">
+            <h3>Services Artisanaux</h3>
+            <p>Gestion des produits artisanaux, présentation des créations traditionnelles et amélioration de la visibilité en ligne.</p>
+            <a href="formulaire artisanaux.php"><button class="btn">Formulaire Artisan</button></a>
+        </div>
+    </div>
+</main>
 <footer>
     <p>© 2026 Artisanry</p>
 </footer>
