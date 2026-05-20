@@ -1,5 +1,9 @@
 
-<?php include 'config.php'; ?>
+<?php 
+require 'config.php';
+
+
+?>
 
 <!DOCTYPE html>
 <html lang="fr">

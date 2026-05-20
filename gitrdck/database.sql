@@ -1,6 +1,6 @@
 
-CREATE DATABASE artisanr;
-USE artisanr;
+CREATE DATABASE artisanry;
+USE artisanry;
 
 CREATE TABLE produits (
     id INT AUTO_INCREMENT PRIMARY KEY,

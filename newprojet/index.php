@@ -58,13 +58,10 @@
         </div>
       </div>
 
-      <!-- Card 1 -->
       <div class="service-card" style="animation-delay:0.1s">
         <div class="service-card-top">
           <div class="service-icon">🛍️</div>
-          <div>
-            <h4>Accès au Catalogue Complet</h4>
-          </div>
+          <div><h4>Accès au Catalogue Complet</h4></div>
         </div>
         <p>Parcourez des centaines de pièces uniques créées par nos artisans sélectionnés. Filtrez par catégorie, région ou savoir-faire.</p>
         <ul class="service-features">
@@ -78,13 +75,10 @@
         </button>
       </div>
 
-      <!-- Card 2 -->
       <div class="service-card" style="animation-delay:0.2s">
         <div class="service-card-top">
           <div class="service-icon">⭐</div>
-          <div>
-            <h4>Commandes & Favoris</h4>
-          </div>
+          <div><h4>Commandes & Favoris</h4></div>
         </div>
         <p>Sauvegardez vos articles préférés, suivez vos demandes et restez connecté avec les artisans de votre choix.</p>
         <ul class="service-features">
@@ -111,13 +105,10 @@
         </div>
       </div>
 
-      <!-- Card 1 -->
       <div class="service-card artisan-card" style="animation-delay:0.15s">
         <div class="service-card-top">
           <div class="service-icon">🏺</div>
-          <div>
-            <h4>Vitrine en Ligne Gratuite</h4>
-          </div>
+          <div><h4>Vitrine en Ligne Gratuite</h4></div>
         </div>
         <p>Créez votre profil artisan et publiez vos produits facilement. Touchez des clients dans tout le Maroc et à l'international.</p>
         <ul class="service-features">
@@ -131,13 +122,10 @@
         </button>
       </div>
 
-      <!-- Card 2 -->
       <div class="service-card artisan-card" style="animation-delay:0.25s">
         <div class="service-card-top">
           <div class="service-icon">📱</div>
-          <div>
-            <h4>Commandes via WhatsApp</h4>
-          </div>
+          <div><h4>Commandes via WhatsApp</h4></div>
         </div>
         <p>Recevez les demandes de vos clients directement sur WhatsApp. Négociez, confirmez et livrez simplement, sans intermédiaire.</p>
         <ul class="service-features">
@@ -151,40 +139,6 @@
         </button>
       </div>
     </div>
-    <div class="service-section">
-    <div class="service-header visitor-header">
-        <div class="icon-box visitor-icon">
-            <span class="emoji-icon">👁️</span> 
-        </div>
-        <div class="header-text">
-            <h3>Espace Visiteur</h3>
-            <p>Explorez la plateforme librement sans inscription</p>
-        </div>
-    </div>
-
-    <div class="service-card">
-        <div class="card-title-row">
-            <div class="title-icon-box visitor-sub-icon">🏺</div>
-            <h4>Accès Libre à la Découverte</h4>
-        </div>
-        
-        <p class="card-description">
-            Parcourez notre galerie publique et découvrez le savoir-faire marocain. Idéal pour jeter un coup d'œil rapide ou s'inspirer sans engagement.
-        </p>
-
-        <ul class="card-features">
-            <li><span class="check-mark">✓</span> Consultation des produits phares</li>
-            <li><span class="check-mark">✓</span> Recherche par région et spécialité</li>
-            <li><span class="check-mark">✓</span> Découverte des histoires des artisans</li>
-        </ul>
-
-        <a href="#" class="btn-service btn-visitor">
-            <span class="plus-sign">+</span> Explorer sans compte
-        </a>
-    </div>
-</div>
-
-
 
   </div>
 </section>
@@ -266,15 +220,9 @@
               <label>Ville</label>
               <select id="a-ville">
                 <option value="">— Sélectionner —</option>
-                <option>Fès</option>
-                <option>Marrakech</option>
-                <option>Casablanca</option>
-                <option>Rabat</option>
-                <option>Meknès</option>
-                <option>Essaouira</option>
-                <option>Agadir</option>
-                <option>Tétouan</option>
-                <option>Autre</option>
+                <option>Fès</option><option>Marrakech</option><option>Casablanca</option>
+                <option>Rabat</option><option>Meknès</option><option>Essaouira</option>
+                <option>Agadir</option><option>Tétouan</option><option>Autre</option>
               </select>
             </div>
           </div>
@@ -316,7 +264,6 @@
       <button class="modal-tab active" onclick="switchTab('login', this)">Connexion</button>
       <button class="modal-tab" onclick="switchTab('register', this)">Inscription</button>
     </div>
-    <!-- Login -->
     <div class="modal-form active" id="tab-login">
       <div class="form-group">
         <label>Email</label>
@@ -327,11 +274,8 @@
         <input type="password" placeholder="••••••••" id="login-password">
       </div>
       <button class="btn-full" onclick="handleLogin()">Se connecter</button>
-      <div class="modal-note">
-        <a href="admin.html">Espace Artisan / Admin →</a>
-      </div>
+      <div class="modal-note"><a href="admin.html">Espace Artisan / Admin →</a></div>
     </div>
-    <!-- Register -->
     <div class="modal-form" id="tab-register">
       <div class="form-group">
         <label>Nom complet</label>
@@ -354,81 +298,8 @@
   </div>
 </div>
 
-<script>
-// ─── REGISTRATION MODALS ─────────────────────────────────────────────────
-function openRegModal(type) {
-  document.getElementById('modal-' + type).classList.add('open');
-  document.body.style.overflow = 'hidden';
-}
-function closeRegModal(type) {
-  document.getElementById('modal-' + type).classList.remove('open');
-  document.body.style.overflow = '';
-}
-// Close on overlay click
-document.getElementById('modal-client').addEventListener('click', e => { if (e.target === e.currentTarget) closeRegModal('client'); });
-document.getElementById('modal-artisan').addEventListener('click', e => { if (e.target === e.currentTarget) closeRegModal('artisan'); });
+<!-- ═══ SCRIPTS ═══ -->
+<script src="produits.js"></script>
 
-function submitClient() {
-  const nom = document.getElementById('c-nom').value.trim();
-  const email = document.getElementById('c-email').value.trim();
-  const pass = document.getElementById('c-pass').value;
-  const pass2 = document.getElementById('c-pass2').value;
-  if (!nom || !email || !pass) { alert('Veuillez remplir les champs obligatoires *'); return; }
-  if (pass !== pass2) { alert('Les mots de passe ne correspondent pas.'); return; }
-  if (pass.length < 8) { alert('Le mot de passe doit contenir au moins 8 caractères.'); return; }
-  // ➜ Intégrez ici votre appel PHP: fetch('register_client.php', { method:'POST', body: formData })
-  document.getElementById('client-form-wrap').style.display = 'none';
-  document.getElementById('client-success').classList.add('show');
-}
-
-function submitArtisan() {
-  const nom = document.getElementById('a-nom').value.trim();
-  const email = document.getElementById('a-email').value.trim();
-  const tel = document.getElementById('a-tel').value.trim();
-  const pass = document.getElementById('a-pass').value;
-  if (!nom || !email || !tel || !pass) { alert('Veuillez remplir les champs obligatoires *'); return; }
-  if (pass.length < 8) { alert('Le mot de passe doit contenir au moins 8 caractères.'); return; }
-  // ➜ Intégrez ici votre appel PHP: fetch('register_artisan.php', { method:'POST', body: formData })
-  document.getElementById('artisan-form-wrap').style.display = 'none';
-  document.getElementById('artisan-success').classList.add('show');
-}
-
-// ─── MODAL CONNEXION ─────────────────────────────────────────────────────
-function openModal() { document.getElementById('modal').classList.add('open'); }
-function closeModal() { document.getElementById('modal').classList.remove('open'); }
-document.getElementById('modal').addEventListener('click', e => { if (e.target === e.currentTarget) closeModal(); });
-
-function switchTab(tab, btn) {
-  document.querySelectorAll('.modal-tab').forEach(t => t.classList.remove('active'));
-  document.querySelectorAll('.modal-form').forEach(f => f.classList.remove('active'));
-  btn.classList.add('active');
-  document.getElementById('tab-' + tab).classList.add('active');
-}
-
-function handleLogin() {
-  const email = document.getElementById('login-email').value;
-  const pass = document.getElementById('login-password').value;
-  if (!email || !pass) { alert('Veuillez remplir tous les champs.'); return; }
-  alert('Connexion réussie ! (Intégrez votre backend PHP ici)');
-  closeModal();
-}
-
-function handleRegister() {
-  const nom = document.getElementById('reg-nom').value;
-  const email = document.getElementById('reg-email').value;
-  const pass = document.getElementById('reg-password').value;
-  if (!nom || !email || !pass) { alert('Veuillez remplir tous les champs obligatoires.'); return; }
-  alert('Compte créé ! (Intégrez votre backend PHP ici)');
-  closeModal();
-}
-
-// ─── SMOOTH SCROLL ────────────────────────────────────────────────────────
-document.querySelectorAll('a[href^="#"]').forEach(a => {
-  a.addEventListener('click', e => {
-    const target = document.querySelector(a.getAttribute('href'));
-    if (target) { e.preventDefault(); target.scrollIntoView({ behavior: 'smooth' }); }
-  });
-});
-</script>
 </body>
 </html>
