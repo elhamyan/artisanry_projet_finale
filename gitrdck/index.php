@@ -16,18 +16,21 @@ require 'config.php';
     <nav>
     <a href="index.php">Accueil</a>
     <a href="ajouter.php">connexecion</a>
+    <a href="#services">services</a>
 </nav>
 
 <header class="hero-header">
     <div class="header-content">
         <h1>Artisanry</h1>
         <p>Plateforme de gestion des produits artisanaux</p>
+        <a href="les produit.php"> <button>découvrire les produit</button></a>
     </div>
 </header>
 
 <main class="services-container">
-    <h2>Services</h2>
-    <div class="services-grid">
+    <div id="services" class="services-section"> <h2>Services</h2>
+    
+     <div class="services-grid">
         <div class="card">
             <h3>Service Client</h3>
             <p>Assistance des clients, réponse aux questions et communication rapide avec les artisans.</p>
@@ -38,6 +41,12 @@ require 'config.php';
             <p>Gestion des produits artisanaux, présentation des créations traditionnelles et amélioration de la visibilité en ligne.</p>
             <a href="formulaire artisanaux.php"><button class="btn">Formulaire Artisan</button></a>
         </div>
+        <div class="card">
+            <h3>visiteur public</h3>
+            <p>Gestion des produits artisanaux, présentation des créations traditionnelles et amélioration de la visibilité en ligne.</p>
+            <a href="les produit.php"><button class="btn">découvrire les produit </button></a>
+        </div>
+     </div>
     </div>
 </main>
 <footer>

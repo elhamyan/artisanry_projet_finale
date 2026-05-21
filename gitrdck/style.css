@@ -1,134 +1,83 @@
-/* body{
-    font-family: Arial;
-    margin:0;
-    background:#f4f4f4;
+/* ==========================================
+   1. RESET & BASE (Bach t7yd l-khwa f jnab)
+   ========================================== */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    scroll-behavior: smooth; /* Bach mli tcliki 3la services thbt b chwiya */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-header{
-    background:#8B4513;
-    color:white;
-    padding:20px;
-    text-align:center;
+* {
+    box-sizing: border-box;
 }
 
-nav{
-    background:#5c3317;
-    padding:10px;
-    text-align:center;
+/* ==========================================
+   2. NAVBAR (Fo9 l-tswira exact)
+   ========================================== */
+nav {
+    position: absolute; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(93, 54, 26, 0.85); /* Lon l-9hwi dyalk */
+    padding: 20px 0;
+    text-align: center;
+    z-index: 100; 
 }
 
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:15px;
-    font-weight:bold;
-}
-
-.container{
-    width:90%;
-    margin:auto;
-    padding:20px;
-}
-
-.card{
-    background:white;
-    padding:15px;
-    margin:15px;
-    border-radius:10px;
-    box-shadow:0 0 10px rgba(0,0,0,0.1);
-    display:inline-block;
-    width:250px;
-    vertical-align:top;
-}
-
-.card img{
-    width:100%;
-    height:180px;
-    object-fit:cover;
-    border-radius:10px;
-}
-
-form{
-    background:white;
-    padding:20px;
-    border-radius:10px;
-}
-
-input, textarea{
-    width:100%;
-    padding:10px;
-    margin:10px 0;
-}
-
-button{
-    background:#8B4513;
-    color:white;
-    padding:10px 20px;
-    border:none;
-    cursor:pointer;
-}*/
-
-footer{
-    background:#333;
-    color:white;
-    text-align:center;
-    padding:15px;
-    margin-top:20px;
-} nav{
-    background:#5c3317;
-    padding:10px;
-    text-align:center;
-}
-
-nav a{
-    color:white;
-    text-decoration:none;
-    margin:15px;
-    font-weight:bold;
-}
-
-
-
-/* L-Header container */
-.hero-header {
-    /* Dir smyt tswira dyal l-tbe3 li 3ndk f had l-blast l-url */
-    background-image: linear-gradient(rgba(0, 0, 0, 0.25), rgba(0, 0, 0, 0.25)), url('image/image.png'); 
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 80vh; /* Had l-irvifae kaykhli l-image tban kbira ou dakhla f l-shasha */
-    display: flex;
-    align-items: center; /* Katjib l-ktba f lwoste dyal l-irtifae verticalement */
-    padding-left: 10%; /* Katkhli l-khwa f l-isre bach l-ktba matjich lasqa f l-jnbe */
-}
-
-/* L-blasa dyal l-ktba li dakhla f l-isre */
-.header-content {
-    text-align: left; /* Katjib l-ktba 3la l-isre kima l-tswira exact */
-    max-width: 600px; /* Bach l-ktba mathrbch l-limne bzaff */
+nav a {
     color: white;
-}
-
-/* Style dyal Title l-kbir */
-.header-content h1 {
-    font-size: 3.5rem; /* Hajm l-ktba kbir */
+    text-decoration: none;
+    margin: 0 15px;
     font-weight: bold;
-    line-height: 1.1; /* Kaykhli s-stora ykono qrabe l-beedhom bhal l-tswira */
-    margin-bottom: 20px;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5); /* Shadow sghir bach tban l-ktba wakha tswira dwiya */
 }
 
-/* Style dyal l-wasf sghir */
-.header-content p {
+/* ==========================================
+   3. HERO SECTION (L-Image li chabra écran kamla)
+   ========================================== */
+.hero-section {
+    position: relative;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('image/background.png'); 
+    background-size: cover;       
+    background-position: center;  
+    background-repeat: no-repeat;
+    
+    width: 100%;
+    height: 100vh; /* Chabra 100% mn l-irtifā3 dyal l-écran */
+    
+    display: flex;
+    align-items: center;          /* Centrage vertical */
+    padding-left: 8%;             /* Khwa 3la l-isser */
+}
+
+/* L-ktba li wst l-image */
+.hero-content {
+    color: white;
+    max-width: 600px;
+}
+
+.hero-content h1 {
+    font-size: 4rem; 
+    font-family: 'Georgia', serif;
+    font-weight: bold;
+    line-height: 1.1;
+    margin: 0 0 20px 0;
+    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
+}
+
+.hero-content p {
     font-size: 1.2rem;
-    margin-bottom: 30px;
+    margin: 0 0 30px 0;
     text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
 }
 
-/* L-Bouton l-Orange kima l-tswira */
+/* L-Bouton l-Orange (Discover) */
 .btn-discover {
     display: inline-block;
-    background-color: #b87333; /* Lon l-orange dyal l-artisanat (Copper/Amber) */
+    background-color: #b87333; 
     color: white;
     text-decoration: none;
     padding: 12px 30px;
@@ -139,45 +88,59 @@ nav a{
 }
 
 .btn-discover:hover {
-    background-color: #9e5a22; /* kayghlaq chwya f l-hover */
+    background-color: #9e5a22; 
 }
 
-/* Style bach yjiw les services f lwoste exact */
+/* ==========================================
+   4. SERVICES SECTION (T7t l-image)
+   ========================================== */
+.services-section {
+    background: rgba(93, 54, 26, 0.85);
+    padding: 100px 20px;
+    min-height: 100vh; 
+}
+
 .services-container {
     max-width: 1200px;
-    margin: 0 auto; /* katjib l-container f lwoste horizontalement */
-    padding: 40px 20px;
-    text-align: center; /* katjib l-unwān f lwoste */
+    margin: 0 auto; 
+    text-align: center; 
 }
 
 .services-container h2 {
-    margin-bottom: 30px;
-    font-size: 2rem;
+    margin-bottom: 40px;
+    font-size: 2.5rem;
+    color: #333;
 }
 
 .services-grid {
     display: flex;
-    justify-content: center; /* katjib les cartes f lwoste */
-    gap: 30px; /* l-khwa li binat hom */
-    flex-wrap: wrap; /* bach ila sghart l-shasha yhbto l-tht auto */
+    justify-content: center; 
+    gap: 30px; 
+    flex-wrap: wrap; 
 }
 
-/* Style dyal les cartes (Sghrnathom chwya ou dndna fihom shadow) */
+/* Style dyal les cartes des produits */
 .card {
     background: white;
     border-radius: 8px;
     padding: 25px;
     width: 300px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.1);
-    text-align: left; /* l-ktba tbdal mn l-isre */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+    text-align: left; 
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+    transition: transform 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
 }
 
 .card h3 {
     margin-top: 0;
     margin-bottom: 15px;
+    color: #333;
 }
 
 .card p {
@@ -187,7 +150,6 @@ nav a{
     margin-bottom: 20px;
 }
 
-/* Les boutons */
 .btn {
     background-color: #8b4513;
     color: white;
@@ -195,9 +157,21 @@ nav a{
     padding: 10px 15px;
     border-radius: 4px;
     cursor: pointer;
+    text-decoration: none;
     width: fit-content;
+    font-weight: bold;
 }
 
 .btn:hover {
     background-color: #5c3a21;
+}
+
+/* ==========================================
+   5. FOOTER & FORMS (Optionnel)
+   ========================================== */
+footer {
+    background:#333;
+    color:white;
+    text-align:center;
+    padding:15px;
 }
