@@ -13,12 +13,14 @@ require 'config.php';
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <nav>
-    <a href="index.php">Accueil</a>
-    <a href="ajouter.php">connexecion</a>
-    <a href="#services">services</a>
+    <nav class="navbar">
+        <h1>Artisanry</h1>
+    <ul class="nav-links">
+        <li><a href="index.php">Accueil</a></li>
+        <li><a href="ajouter.php">Connexion</a></li>
+        <li><a href="#services">Services</a></li>
+    </ul>
 </nav>
-
 <header class="hero-header">
     <div class="header-content">
         <h1>Artisanry</h1>

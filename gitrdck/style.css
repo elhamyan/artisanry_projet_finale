@@ -1,177 +1,142 @@
-/* ==========================================
-   1. RESET & BASE (Bach t7yd l-khwa f jnab)
-   ========================================== */
-html, body {
+body{
+    background-color: #fff;
+}
+/* nav{
+    background-color: rgb(92, 54, 4);
+    text-align: center;
+    color: #910a0a;
+    text-decoration: none;
+}
+nav a{
+    color: #110d0d;
+    text-decoration: none;
+    
+} */
+ /* The main navbar container */
+.navbar {
+    display: flex;
+    justify-content: space-between; /* This pushes the logo to the left and links to the right */
+    align-items: center;
+    background-color: #613b06; /* Your brown color */
+    padding: 15px 30px; /* Gives it breathing room top/bottom and sides */
+}
+
+/* The list containing your links */
+.nav-links {
+    display: flex;
+    list-style: none; /* Removes the bullet points */
+    gap: 25px; /* Adds space BETWEEN the links automatically */
     margin: 0;
     padding: 0;
-    width: 100%;
-    height: 100%;
-    scroll-behavior: smooth; /* Bach mli tcliki 3la services thbt b chwiya */
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-* {
-    box-sizing: border-box;
+/* The actual clickable links */
+.nav-links a {
+    color: #ffffff; /* White text so it's readable on the dark brown background */
+    text-decoration: none; /* Removes the default underline */
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
 }
 
-/* ==========================================
-   2. NAVBAR (Fo9 l-tswira exact)
-   ========================================== */
-nav {
-    position: absolute; 
-    top: 0;
-    left: 0;
-    width: 100%;
-    background-color: rgba(93, 54, 26, 0.85); /* Lon l-9hwi dyalk */
-    padding: 20px 0;
-    text-align: center;
-    z-index: 100; 
+/* Hover effect to make it interactive */
+.nav-links a:hover {
+    color: #deacac; /* Changes color smoothly when you hover over it */
 }
-
-nav a {
-    color: white;
-    text-decoration: none;
-    margin: 0 15px;
-    font-weight: bold;
-}
-
-/* ==========================================
-   3. HERO SECTION (L-Image li chabra écran kamla)
-   ========================================== */
-.hero-section {
-    position: relative;
-    background-image: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.4)), url('image/background.png'); 
-    background-size: cover;       
-    background-position: center;  
+.hero-header {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(222, 172, 172, 0.5)), url('image/background.png');
+    background-position: center;
     background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
     
-    width: 100%;
-    height: 100vh; /* Chabra 100% mn l-irtifā3 dyal l-écran */
-    
+    /* Added some default height and padding for a hero section */
+    min-height: 80vh; 
     display: flex;
-    align-items: center;          /* Centrage vertical */
-    padding-left: 8%;             /* Khwa 3la l-isser */
+    align-items: center;
+    justify-content: center;
 }
-
-/* L-ktba li wst l-image */
-.hero-content {
-    color: white;
-    max-width: 600px;
-}
-
-.hero-content h1 {
-    font-size: 4rem; 
-    font-family: 'Georgia', serif;
-    font-weight: bold;
-    line-height: 1.1;
-    margin: 0 0 20px 0;
-    text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-}
-
-.hero-content p {
-    font-size: 1.2rem;
-    margin: 0 0 30px 0;
-    text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.5);
-}
-
-/* L-Bouton l-Orange (Discover) */
-.btn-discover {
-    display: inline-block;
-    background-color: #b87333; 
-    color: white;
-    text-decoration: none;
-    padding: 12px 30px;
-    font-size: 1.1rem;
-    border-radius: 6px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.2);
-    transition: background 0.3s ease;
-}
-
-.btn-discover:hover {
-    background-color: #9e5a22; 
-}
-
-/* ==========================================
-   4. SERVICES SECTION (T7t l-image)
-   ========================================== */
-.services-section {
-    background: rgba(93, 54, 26, 0.85);
-    padding: 100px 20px;
-    min-height: 100vh; 
-}
-
-.services-container {
-    max-width: 1200px;
-    margin: 0 auto; 
-    text-align: center; 
-}
-
-.services-container h2 {
-    margin-bottom: 40px;
-    font-size: 2.5rem;
-    color: #333;
-}
-
+/* Container dial l-cards */
 .services-grid {
-    display: flex;
-    justify-content: center; 
-    gap: 30px; 
-    flex-wrap: wrap; 
+    display: grid;
+    /* Had l-ster automatic kay9ad l-cards jneb b jneb 3la 7sab l-mdah dial l-shasha */
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 30px; /* Faragh bin l-cards */
+    padding: 40px 20px;
+    max-width: 1200px;
+    margin: 0 auto; /* Yji f l-wsst dial l-safha */
 }
 
-/* Style dyal les cartes des produits */
+/* Style dial l-card rasha */
 .card {
-    background: white;
-    border-radius: 8px;
-    padding: 25px;
-    width: 300px;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.08);
-    text-align: left; 
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    transition: transform 0.3s ease;
+    background-color: #ffffff;
+    border-radius: 12px; /* Jnab dayrin smooth */
+    padding: 30px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.08); /* Khial khfif bsh tban 3alia */
+    border-top: 5px solid #613b06; /* L-lon dial l-navbar li drna sba9 */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
+/* Effect mli l-user y7et l-far (Mouse Hover) */
 .card:hover {
-    transform: translateY(-5px);
+    transform: translateY(-5px); /* L-card kat7rk l-fof shwya */
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15); /* L-khial kaywli kbr */
 }
 
+/* Style dial l-3onwan h3 */
 .card h3 {
-    margin-top: 0;
+    color: #333333;
+    font-size: 22px;
     margin-bottom: 15px;
-    color: #333;
+    font-weight: 600;
 }
 
+/* Style dial l-text p */
 .card p {
-    font-size: 0.95rem;
-    color: #555;
-    line-height: 1.5;
-    margin-bottom: 20px;
+    color: #666666;
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 25px;
+    min-height: 70px; /* Bsh y7afed 3la l-9ad dial cards mesh l-khra m9ada o l-khra la */
 }
 
+/* Style dial l-bouton */
 .btn {
-    background-color: #8b4513;
+    background-color: #613b06; /* Nafrs l-lon dial navbar */
     color: white;
     border: none;
-    padding: 10px 15px;
-    border-radius: 4px;
-    cursor: pointer;
-    text-decoration: none;
-    width: fit-content;
+    padding: 12px 25px;
+    font-size: 14px;
     font-weight: bold;
+    border-radius: 25px; /* Bouton dayr smooth */
+    cursor: pointer;
+    width: 100%; /* Kayakhod l-mdah dial l-card full */
+    transition: background-color 0.3s ease;
 }
 
+/* Hover dial l-bouton */
 .btn:hover {
-    background-color: #5c3a21;
+    background-color: #deacac; /* Kayreja3 l-lon li zwin li drna m3a l-navbar */
+    color: #333333;
 }
 
-/* ==========================================
-   5. FOOTER & FORMS (Optionnel)
-   ========================================== */
-footer {
-    background:#333;
-    color:white;
-    text-align:center;
-    padding:15px;
+/* Extra touch: 7yid l-underline mn l-link dial link tag <a> */
+.card a {
+    text-decoration: none;
+    display: inline-block;
+    width: 100%; /* Bsh l-bouton ykhd l-wsa3 kaml */
+}
+h2{
+    background-color: #613b06;
+    text-align: center;
+    margin-left:333px ;
+    margin-right:333px;
+    border-radius:55px;
+    padding: 12px;
+}
+footer{
+    background-color: #613b06;
+    padding: 33px;
+    text-align: center;
 }
