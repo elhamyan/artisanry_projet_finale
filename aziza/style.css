@@ -1,5 +1,6 @@
 body{
     background-color: #fff;
+    margin: 0;
 }
 /* nav{
     background-color: rgb(92, 54, 4);
@@ -18,7 +19,7 @@ nav a{
     justify-content: space-between; /* This pushes the logo to the left and links to the right */
     align-items: center;
     background-color: #613b06; /* Your brown color */
-    padding: 15px 30px; /* Gives it breathing room top/bottom and sides */
+    padding: 15px 30px;
 }
 
 /* The list containing your links */
@@ -51,10 +52,26 @@ nav a{
     position: relative;
     
     /* Added some default height and padding for a hero section */
-    min-height: 80vh; 
+    color: #ffffff;
+    min-height: 80vh;
+    padding-top:155px ; 
     display: flex;
-    align-items: center;
-    justify-content: center;
+    padding: 122px;
+    justify-content: left;
+}
+.btnn{
+    background-color: #613b06; /* Nafrs l-lon dial navbar */
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 14px;
+    font-weight: bold;
+    border-radius: 25px; /* Bouton dayr smooth */
+    cursor: pointer;
+    width: 100%; /* Kayakhod l-mdah dial l-card full */
+    transition: background-color 0.3s ease;
+    
+
 }
 /* Container dial l-cards */
 .services-grid {

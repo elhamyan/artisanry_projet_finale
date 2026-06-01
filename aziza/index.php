@@ -2,7 +2,6 @@
 <?php 
 require 'config.php';
 
-
 ?>
 
 <!DOCTYPE html>
@@ -25,7 +24,7 @@ require 'config.php';
     <div class="header-content">
         <h1>Artisanry</h1>
         <p>Plateforme de gestion des produits artisanaux</p>
-        <a href="les produit.php"> <button>découvrire les produit</button></a>
+        <a href="les produit.php"> <button class="btn">découvrire les produit</button></a>
     </div>
 </header>
 
@@ -36,7 +35,7 @@ require 'config.php';
         <div class="card">
             <h3>Service Client</h3>
             <p>Assistance des clients, réponse aux questions et communication rapide avec les artisans.</p>
-            <a href="formulaire client.php"><button class="btn">Formulaire client</button></a>
+            <a href="formulaire client.php"><button class="btnn">Formulaire client</button></a>
         </div>
         <div class="card">
             <h3>Services Artisanaux</h3>
