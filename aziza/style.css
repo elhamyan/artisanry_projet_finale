@@ -21,6 +21,9 @@ nav a{
     background-color: #613b06; /* Your brown color */
     padding: 15px 30px;
 }
+.navbar h1{
+    color: #ffffff;
+}
 
 /* The list containing your links */
 .nav-links {
@@ -42,7 +45,7 @@ nav a{
 
 /* Hover effect to make it interactive */
 .nav-links a:hover {
-    color: #deacac; /* Changes color smoothly when you hover over it */
+    color: #ddc637aa; /* Changes color smoothly when you hover over it */
 }
 .hero-header {
     background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(222, 172, 172, 0.5)), url('image/background.png');
@@ -59,20 +62,16 @@ nav a{
     padding: 122px;
     justify-content: left;
 }
-.btnn{
-    background-color: #613b06; /* Nafrs l-lon dial navbar */
-    color: white;
-    border: none;
-    padding: 12px 25px;
-    font-size: 14px;
-    font-weight: bold;
-    border-radius: 25px; /* Bouton dayr smooth */
-    cursor: pointer;
-    width: 100%; /* Kayakhod l-mdah dial l-card full */
-    transition: background-color 0.3s ease;
-    
+.header-content h1{
+    margin-top: 50px;
+    margin-left: 20px;
+    font-size: 34px;
 
 }
+.header-content p{
+ margin-left: 20px;
+}
+
 /* Container dial l-cards */
 .services-grid {
     display: grid;
@@ -123,7 +122,7 @@ nav a{
     background-color: #613b06; /* Nafrs l-lon dial navbar */
     color: white;
     border: none;
-    padding: 12px 25px;
+    padding: 12px 20px;
     font-size: 14px;
     font-weight: bold;
     border-radius: 25px; /* Bouton dayr smooth */
@@ -134,7 +133,7 @@ nav a{
 
 /* Hover dial l-bouton */
 .btn:hover {
-    background-color: #deacac; /* Kayreja3 l-lon li zwin li drna m3a l-navbar */
+    background-color: #d8ad36; /* Kayreja3 l-lon li zwin li drna m3a l-navbar */
     color: #333333;
 }
 

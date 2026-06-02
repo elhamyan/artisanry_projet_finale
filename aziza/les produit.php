@@ -6,7 +6,48 @@
     <title>Document</title>
 </head>
 <body>
-    <style>
+<style>
+body{
+    margin:0;
+ }
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* This pushes the logo to the left and links to the right */
+    align-items: center;
+    background-color: #613b06; /* Your brown color */
+    padding: 15px 30px;
+}
+.navbar h1{
+    color: #ffffff;
+}
+
+/* The list containing your links */
+.nav-links {
+    display: flex;
+    list-style: none; /* Removes the bullet points */
+    gap: 25px; /* Adds space BETWEEN the links automatically */
+    margin: 0;
+    padding: 0;
+}
+
+/* The actual clickable links */
+.nav-links a {
+    color: #ffffff; /* White text so it's readable on the dark brown background */
+    text-decoration: none; /* Removes the default underline */
+    font-size: 16px;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+/* Hover effect to make it interactive */
+.nav-links a:hover {
+    color: #ddc637aa; /* Changes color smoothly when you hover over it */
+}
+
+
+
     /* L'bassa li jm3a ga3 les produits */
 .products-section {
     width: 100%;
@@ -89,17 +130,21 @@
     font-size: 14px;
     line-height: 1.5;
 }</style>
-<header>
-<nav>
-    <a href="index.php">accuiel</a>
-    <a href=""></a>
+<nav class="navbar">
+        <h1>Artisanry</h1>
+    <ul class="nav-links">
+        <li><a href="index.php">Accueil</a></li>
+        <li><a href="ajouter.php">Connexion</a></li>
+        <li><a href="#services">Services</a></li>
+    </ul>
 </nav>
+<header class="hero-header">
+    <div class="header-content">
+         <h3>Liste des Produits</h3>
+    </div>
 </header>
-    
-
 <div class="products-section">
-    <h3>Liste des Produits</h3>
-    
+   
     <div class="products-grid">
         <!-- Produit 1 -->
         <div class="product-card">
