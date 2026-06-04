@@ -44,7 +44,7 @@ if (isset($_POST['register'])) {
 <head>
     <meta charset="UTF-8">
     <title>Inscription Artisan</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         body { margin-top: 120px; display: flex; justify-content: center; padding: 20px; }
         .auth-box { width: 100%; max-width: 500px; background: #fff; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); border-top: 4px solid var(--copper); }

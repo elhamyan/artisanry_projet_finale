@@ -1,6 +1,6 @@
 <?php
 // 1. L-CONNEXION W L-SESSIONS
-require 'connexion _db';
+require 'connexion _db.php';
 session_start();
 
 // Hna rani dert id fictif (Ex: 1) gha bch t-tester, mn b3d mli t7et login.php ghadi t-tbdel b: $_SESSION['artisan_id']
@@ -111,7 +111,7 @@ $categories = $pdo->query("SELECT * FROM categories")->fetchAll();
 <head>
     <meta charset="UTF-8">
     <title>Tableau de Bord Artisan</title>
-    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="style.css">
     <style>
         /* CSS Khass b l-Dashboard bch ykoun clean w jdid */
         body { margin-top: 100px; padding: 20px; background-color: #fdfaf6; }
