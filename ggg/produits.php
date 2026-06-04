@@ -1,5 +1,5 @@
 <?php
-require'connexion _db.php';
+require 'connexion _db.php';
 session_start();
 
 // 1. RÉCUPÉRATION DES CATÉGORIES (Pour le filtre)
@@ -8,22 +8,26 @@ $categories = $pdo->query("SELECT * FROM categories")->fetchAll();
 // 2. GESTION DU FILTRE PAR CATÉGORIE
 $categorie_filtre = isset($_GET['categorie']) ? intval($_GET['categorie']) : 0;
 
+// =========================================================================
+// HNA FIN ZDNA L-FILTRE DYAL 'approuve' BCH L-PRODUIT L-JDIID MAYBANSH DIRECT
+// =========================================================================
 if ($categorie_filtre > 0) {
-    // Ila l-client khtar chi catégorie spécifique
+    // Ila l-client khtar chi catégorie spécifique + khass ykoun approuvé
     $sql = "SELECT p.*, a.nom as artisan_nom, c.nom_categorie 
             FROM produits p 
             JOIN artisans a ON p.artisan_id = a.id 
             JOIN categories c ON p.categorie_id = c.id 
-            WHERE p.categorie_id = :cat_id 
+            WHERE p.categorie_id = :cat_id AND p.statut = 'approuve' 
             ORDER BY p.date_ajout DESC";
     $stmt = $pdo->prepare($sql);
     $stmt->execute([':cat_id' => $categorie_filtre]);
 } else {
-    // Ila makhgatar walo, n-affichou kolshi
+    // Ila makhgatar walo, n-affichou kolshi li approuvé 
     $sql = "SELECT p.*, a.nom as artisan_nom, c.nom_categorie 
             FROM produits p 
             JOIN artisans a ON p.artisan_id = a.id 
             LEFT JOIN categories c ON p.categorie_id = c.id 
+            WHERE p.statut = 'approuve' 
             ORDER BY p.date_ajout DESC";
     $stmt = $pdo->query($sql);
 }

@@ -4,7 +4,7 @@
     <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-<header>
+<header>   
     <div class="logo">
         <h2><a href="index.php" style="color: var(--copper); text-decoration: none;">ArtisatMaroc</a></h2>
     </div>
@@ -23,4 +23,6 @@
             <?php endif; ?>
         </ul>
     </nav>
+
+    
 </header>

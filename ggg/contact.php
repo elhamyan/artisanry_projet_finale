@@ -16,6 +16,7 @@ if (isset($_POST['send_contact'])) {
             <div style="background: #d4edda; color: #155724; padding: 10px; margin-bottom: 15px; border-radius: 4px; text-align: center;"><?php echo $msg; ?></div>
         <?php endif; ?>
 
+        
         <form action="contact.php" method="POST" style="display: flex; flex-direction: column; gap: 15px;">
             <div style="display: flex; flex-direction: column; gap: 5px;">
                 <label style="font-weight: 600; color: #555;">Nom complet</label>

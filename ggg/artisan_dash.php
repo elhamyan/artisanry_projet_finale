@@ -40,12 +40,14 @@ if (isset($_POST['ajouter_produit'])) {
         $uploadOk = 0;
     }
 
-    // Ila l-image mzyana, ndwzo l-upload w l-base de données
+    // =========================================================================
+    // HNA FIN ZDNA L-CODE L-JDID DYAL L-VALIDATION (STATUT EN ATTENTE)
+    // =========================================================================
     if ($uploadOk == 1) {
         if (move_uploaded_file($_FILES["image"]["tmp_name"], $target_file)) {
-            // Requête SQL b PDO
-            $sql = "INSERT INTO produits (titre, description, prix, image, artisan_id, categorie_id) 
-                    VALUES (:titre, :description, :prix, :image, :artisan_id, :categorie_id)";
+            // Requête SQL jdid m3a l-champ 'statut' direct b 'en_attente'
+            $sql = "INSERT INTO produits (titre, description, prix, image, artisan_id, categorie_id, statut) 
+                    VALUES (:titre, :description, :prix, :image, :artisan_id, :categorie_id, 'en_attente')";
             $stmt = $pdo->prepare($sql);
             $stmt->execute([
                 ':titre' => $titre,
@@ -55,7 +57,7 @@ if (isset($_POST['ajouter_produit'])) {
                 ':artisan_id' => $artisan_id,
                 ':categorie_id' => $categorie_id
             ]);
-            $message = "Produit ajouté avec succès !";
+            $message = "Produit ajouté avec succès ! Il sera visible après la validation de l'administration.";
             $status = "success";
         } else {
             $message = "Erreur lors de l'uploade de l'image.";
@@ -94,7 +96,7 @@ if (isset($_GET['supprimer'])) {
 // ==========================================
 // 4. RÉCUPÉRATION DES DONNÉES (READ)
 // ==========================================
-// Njibou l-produits dyal had l-artisan bo7do
+// Njibou l-produits dyal had l-artisan bo7do (m3a l-statut dyalhom bch ybanu lih)
 $sql_produits = "SELECT p.*, c.nom_categorie FROM produits p 
                  LEFT JOIN categories c ON p.categorie_id = c.id 
                  WHERE p.artisan_id = :artisan_id ORDER BY p.date_ajout DESC";
@@ -228,6 +230,17 @@ $categories = $pdo->query("SELECT * FROM categories")->fetchAll();
                 </tbody>
             </table>
         <?php endif; ?>
+
+        <!-- Gha dakhil l-boucle foreach dyal les produits f artisan_dash.php -->
+<td>
+    <?php if($p['statut'] == 'en_attente'): ?>
+        <span style="color: #d9534f; font-weight: bold;">En attente</span>
+    <?php else: ?>
+        <span style="color: #28a745; font-weight: bold;">Approuvé</span>
+    <?php endif; ?>
+</td>
+
+
     </div>
 
 </div>

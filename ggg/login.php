@@ -45,6 +45,7 @@ if (isset($_POST['login'])) {
         .auth-link a { color: var(--copper); text-decoration: none; font-weight: bold; }
     </style>
 </head>
+
 <body>
 
 <?php include 'includes/header.php'; ?>
